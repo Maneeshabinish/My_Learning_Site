@@ -1,0 +1,62 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function custom_address_book_theme($existing, $type, $theme, $path) {
+  return [
+    'address_book_entries' => [
+      'variables' => [
+        'header' => NULL,
+        'rows' => NULL,
+        
+      ],
+      'template' => 'address-book-entries', // This corresponds to the template file.
+    ],
+    
+    
+
+    'AddAddress_form'  => [
+
+    'render element' => 'form',
+    'template' => 'AddAddress-form',
+
+    ],
+
+
+    'search_form'  => [
+
+    'render element' => 'form',
+    'template' => 'search-form',
+
+    ],
+
+    'edit_form'  => [
+
+    'render element' => 'form',
+    'template' => 'edit-form',
+
+    ],
+
+    'deletion_form'  => [
+
+    'render element' => 'form',
+    'template' => 'deletion-form',
+
+    ],
+
+    'search_result_table' => [
+      'variables' => [
+        'header' => NULL,
+        'rows' => NULL,
+      ],
+      'template' => 'search-result-table', // This corresponds to the template file.
+    ],
+    
+  ];
+}
+
+
+
+
+

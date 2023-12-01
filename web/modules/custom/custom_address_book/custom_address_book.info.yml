@@ -1,0 +1,5 @@
+name: Custom Address Book
+type: module
+description: 'A custom address book module for Drupal'
+package: custom
+core_version_requirement: ^9 || ^10

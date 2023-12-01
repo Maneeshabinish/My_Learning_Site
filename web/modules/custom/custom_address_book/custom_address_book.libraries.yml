@@ -1,0 +1,8 @@
+custom_address_book/custom_address_book:
+  version: VERSION
+  js:
+    js/editAddressAjax.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal.dialog.ajax 
+    - core/drupal

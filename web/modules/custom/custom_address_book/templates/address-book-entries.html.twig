@@ -1,0 +1,40 @@
+
+<table>
+  <thead>
+    <tr>
+      {% for header in header %}
+        <th>{{ header }}</th>
+      {% endfor %}
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for row in rows %}
+      <tr>
+        {% for column in row %}
+          <td>{{ column }}</td>
+         {% endfor %}
+        <td>
+          {# Edit Link with Ajax trigger #}
+           <a href="/edit_form_ajax/{{ row[0] }}"
+            class="use-ajax"
+            data-dialog-type="dialog" 
+            data-dialog-options="{&quot;width&quot;:400}" >
+            Edit
+          </a>
+        </td>
+        <td>
+          {# Edit Link with Ajax trigger #}
+          <a href="/deleteentry/{{ row[0] }}"
+            class="use-ajax"
+            data-dialog-type="dialog" 
+            data-dialog-options="{&quot;width&quot;:700}">
+            Delete
+          </a>
+        </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{{ pager }}

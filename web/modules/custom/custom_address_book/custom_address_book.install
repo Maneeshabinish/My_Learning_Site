@@ -1,0 +1,45 @@
+<?php
+
+
+/**
+ * Implements hook_schema().
+ */
+function custom_address_book_schema() {
+  $schema['address_entry'] = [
+    'description' => 'Custom Address Entry Table',
+    'fields' => [
+      'aid' => [
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'description' => 'Address Entry ID',
+      ],
+      'name' => [
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'description' => 'Name',
+      ],
+      'email' => [
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'description' => 'Email',
+      ],
+      'phone' => [
+        'type' => 'varchar',
+        'length' => 20,
+        'description' => 'Phone',
+      ],
+      'dob' => [
+        'type' => 'varchar',
+        'mysql_type' => 'datetime',
+        'not null' => TRUE,
+        'description' => 'Date of Birth',
+      ],
+    ],
+    'primary key' => ['aid'],
+  ];
+
+  return $schema;
+}
